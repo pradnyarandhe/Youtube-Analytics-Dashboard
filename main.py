@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 
-API_KEY = "AIzaSyBOzzGvs4cqz9DvPjGDeJI97ocDaSC9XKw"
+API_KEY = "__apikey__"
 youtube = build("youtube", "v3", developerKey=API_KEY)
 
 st.set_page_config(page_title="YouTube Dashboard", layout="wide")
@@ -326,4 +326,5 @@ if fetch_data or st.session_state.get("channel_fetched", False):
             row2_col1.plotly_chart(fig_radar, use_container_width=True)
             row2_col2.plotly_chart(fig_radial, use_container_width=True)
             row2_col3.plotly_chart(fig_multi_area, use_container_width=True)
+
             row2_col4.plotly_chart(fig_horizontal, use_container_width=True)
